@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Cas pratique : exemple d&#x27;atelier de découpe d&#x27;user stories</title>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="../assets/built/screen.css">
+  <link rel="stylesheet" type="text/css" href="../assets/built/algolia-min.css">
+
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://maximearnstamm.github.com/blog/cas-pratique-exemple-datelier-de-decoupe-duser-stories/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="https://maximearnstamm.github.com/blog/cas-pratique-exemple-datelier-de-decoupe-duser-stories/amp/">
+    
+    <meta property="og:site_name" content="Agile &#x3D;&#x3D; Produit">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Cas pratique : exemple d&#x27;atelier de découpe d&#x27;user stories">
+    <meta property="og:description" content="Un exemple d&#x27;application de l&#x27;atelier de découpe de la fonctionnalité de vente en ligne de snack pour les cinémas">
+    <meta property="og:url" content="https://maximearnstamm.github.com/blog/cas-pratique-exemple-datelier-de-decoupe-duser-stories/">
+    <meta property="article:published_time" content="2019-12-10T13:36:35.000Z">
+    <meta property="article:modified_time" content="2019-12-10T14:29:27.000Z">
+    <meta property="article:tag" content="Product Management">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Cas pratique : exemple d&#x27;atelier de découpe d&#x27;user stories">
+    <meta name="twitter:description" content="Un exemple d&#x27;application de l&#x27;atelier de découpe de la fonctionnalité de vente en ligne de snack pour les cinémas">
+    <meta name="twitter:url" content="https://maximearnstamm.github.com/blog/cas-pratique-exemple-datelier-de-decoupe-duser-stories/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Maxime">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Product Management">
+    <meta name="twitter:site" content="@MaximeArnstamm">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Agile &#x3D;&#x3D; Produit",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://maximearnstamm.github.com/blog/favicon.ico",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Maxime",
+        "url": "https://maximearnstamm.github.com/blog/author/maxime/",
+        "sameAs": []
+    },
+    "headline": "Cas pratique : exemple d&#x27;atelier de découpe d&#x27;user stories",
+    "url": "https://maximearnstamm.github.com/blog/cas-pratique-exemple-datelier-de-decoupe-duser-stories/",
+    "datePublished": "2019-12-10T13:36:35.000Z",
+    "dateModified": "2019-12-10T14:29:27.000Z",
+    "keywords": "Product Management",
+    "description": "Un exemple d&#x27;application de l&#x27;atelier de découpe de la fonctionnalité de vente en ligne de snack pour les cinémas",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://maximearnstamm.github.com/blog/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 2.20">
+    <link rel="alternate" type="application/rss+xml" title="Agile &#x3D;&#x3D; Produit" href="https://maximearnstamm.github.com/blog/rss/">
+    <script src="https://getinsights.io/js/insights.js"></script>
+<script>
+insights.init('bhV7j2fLLdlYrJKy');
+insights.trackPages();
+</script>
+
+<style>
+.toast {
+  text-align:left;
+    padding: 21px 0;
+    border-radius:4px;
+    top: 0px;
+    position:relative;
+    box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.2);
+    border: 1px solid #E3E3E3;
+    margin-bottom: 1.5em;
+}
+    
+.toast:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+  border-top-left-radius:4px;
+  border-bottom-left-radius: 4px;
+}
+
+.toast__type {
+  color: #3e3e3e;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.toast__message {
+    margin-top: 0;
+  margin-bottom: 0;
+    color: #878787;
+}
+
+.toast__message p {
+    margin-bottom:10px !important;
+}
+
+.toast__content{
+  padding-left:70px;
+  padding-right:60px;
+}
+
+.toast--blue .toast__icon{
+  background-color:#1D72F3;
+}
+
+.toast--blue:before{
+  background-color:#1D72F3;
+}
+
+</style>
+
+</head>
+
+<body class="post-template tag-product-management">
+
+  <div class="site-wrapper">
+
+    
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+                <a class="site-nav-logo" href="../">Agile &#x3D;&#x3D; Produit</a>
+    </div>
+</nav>
+    </div>
+</header>
+
+
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post tag-product-management no-image">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="2019-12-10">10 décembre 2019</time>
+                        <span class="date-divider">/</span> <a href="../tag/product-management/">Product Management</a>
+                </section>
+                <h1 class="post-full-title">Cas pratique : exemple d&#x27;atelier de découpe d&#x27;user stories</h1>
+            </header>
+
+
+            <section class="post-full-content">
+                <div class="post-content">
+                    <!--kg-card-begin: html--><div style="height:30px"></div><!--kg-card-end: html--><p>Dans <a href="https://maximearnstamm.github.io/blog/pratiques-pour-bien-decouper-des-user-stories/">l’article sur les pratiques pour découper les users stories</a>, j’ai proposé un atelier d’aide à la découpe en groupe. Comme cet atelier est important, je vous propose un exemple fictif, pour se rendre mieux compte de la démarche qu’on peut suivre.</p><h2 id="le-sujet">Le sujet</h2><p>Contexte : Ici, nous serons une équipe web + web mobile travaillant pour le compte de la partie e-commerce d’une chaîne de cinémas. Nous ne nous occuperons pas du mobile natif, mais nous leur fournissons les services.</p><p>La fonctionnalité proposée est la suivante : <strong>Je veux vendre des snacks en ligne en même temps que les places de cinéma, et les clients pourront récupérer leur sac en allant dans la salle.</strong></p><p>On peut y attribuer de la valeur : augmentation des ventes de snack et augmentation du confort utilisateur qui aura une incidence positive sur la vente de billet.</p><p>Il est prévu d’ouvrir la vente en ligne de snacks progressivement de salles en salles.</p><h2 id="les-acteurs">Les acteurs</h2><p><strong>La première question à se poser c’est : qui est concerné par la fonctionnalité ?</strong></p><p>Ici, de toute évidence on a les clients. Mais est ce que tous les clients sont pareils ? On peut se dire qu’il y a une différence de contexte d’utilisation entre les utilisateurs web, web mobile et mobile. C’est déjà un premier axe à envisager.</p><p>Ensuite, les utilisateurs ponctuels n’ont pas le même parcours que les possesseurs de cartes illimitées. Enfin, est ce qu’il faut séparer les utilisateurs individuels et les groupes ou familles ? On ne sait pas encore, on verra en listant les cas.</p><p>On a listé tous les groupes possibles pour les clients. Mais il y a d’autres acteurs ! Il y a une contrepartie physique à la commande en ligne de snacks.</p><p>Donc nous avons aussi les préparateurs des sac de snacks, le personnel qui va donner les bons sacs aux bons clients et les gestionnaires qui vont passer les commandes et gérer les stocks.</p><p>Enfin, il y a les administrateurs et le marketing, qui vont définir la liste des produits disponibles à la vente, leurs prix et les offres éventuelles.</p><p>Au final, il y a de nombreux groupes à prendre en compte. Quand on va lister les cas, il faudra faire attention à se mettre à la place de chacun.</p><!--kg-card-begin: html--><div class="toast__container">
+  <div class="toast__cell">
+
+    <div class="toast toast--yellow add-margin">
+      <div class="toast__content">
+
+        <div class="toast__message">
+ 			Les acteurs :
+            <ul>
+<li>Client web mobile</li>
+<li>Client desktop</li>
+<li>Client ponctuel</li>
+<li>Client carte illimitée</li>
+<li>Client solo</li>
+<li>Client groupe</li>
+<li>Client famille</li>
+<li>Personnel préparateur</li>
+<li>Personnel distributeur</li>
+<li>Personnel gestionnaire stock</li>
+<li>Administrateur marketing</li>
+            </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div><!--kg-card-end: html--><h2 id="typical">Typical</h2><p>Ici, on va lister les cas nominaux. <strong>On ne parle pas de la solution, des écrans, des services. On parle d’utilisation.</strong></p><p>On va commencer avec la vue client : on veut pouvoir choisir des snacks quand on achète une place de cinéma, et payer tout en même temps. D’ailleurs, en parlant de payer, il faudra faire attention aux différents taux de tva.</p><p>Il faut aussi penser au cas où un client veut sa place mais pas de snacks.</p><p>En cas de groupe ou famille, le fonctionnement ne change pas vraiment, on ajoute plus d’articles dans le panier, donc il n’y a pas de cas ici.</p><p>Quel est le parcours d’un client avec une carte illimitée ? Beaucoup d’entre eux prennent leur billet sur place ou sur leur téléphone, peu avant la séance. Dans ces cas là, on ne peut pas leur proposer la fonctionnalité, ils devront aller au comptoir prendre leurs snacks. Ça vaut le coup de creuser le sujet, on ne voudrait pas que cette catégorie de clients se sente ignorée.</p><p>Côté personnel : il faut fournir un écran de préparation par séance. Question : comment seront organisés les préparateurs et les distributeurs ? Il faut découvrir ça rapidement, car ça aura une incidence forte sur les outils.</p><p>Il faut aussi fournir un moyen au gestionnaire de stock de faire les commandes nécessaires pour fournir tous les clients. Question : est ce qu’on s’interface avec un outil existant ou est ce qu’on lui fournit un écran ?</p><p>Pour les administrateurs : il faut un moyen d’ajouter, modifier ou supprimer les produits. Question : même chose que pour le gestionnaire stock, est ce qu’on s’interface avec un outil existant ou est ce qu’on lui fournit un écran ?</p><p>Enfin, côté technique, les salles vont être activées au fur et à mesure, donc il faut que la vente de snack ne soit possible que pour les salles activées.</p><!--kg-card-begin: html--><div class="toast__container">
+  <div class="toast__cell">
+
+    <div class="toast toast--yellow add-margin">
+      <div class="toast__content">
+
+        <div class="toast__message">
+ 			Typical :
+            <ul>
+<li>Achat place + snacks</li>
+<li>Achat place sans snacks</li>
+<li>Faire attention à la TVA</li>
+<li>Écran de préparation par séance</li>
+<li>Transmettre les besoins au gestionnaire de stock</li>
+<li>Moyen d’administrer les produits</li>
+<li>Activation/désactivation manuelle de la vente de snack pour chaque salle</li>
+                </ul>
+Questions :
+                <ul>
+<li>Quels sont les parcours typiques des clients illimités ? Il faut plus de données.</li>
+<li>Comment vont être organisés physiquement les préparateurs et les distributeurs ?</li>
+<li>Interface avec outil existant ou écran pour gestionnaire stock et pour admin produits ?</li>
+                
+            </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div><!--kg-card-end: html--><h2 id="interesting">Interesting</h2><p><strong>Ici, on veut se concentrer sur les cas intéressants, ceux qui sont en rapport direct avec l’objectif.</strong></p><p>Les objectifs de cette fonctionnalité sont d’augmenter les ventes de snacks et d’offrir un confort aux utilisateurs pour leur donner envie de venir dans nos cinémas plutôt que dans ceux de la concurrence.</p><p>Pour inciter à la vente, on va vouloir proposer des menus. Donc il faut aussi que l’administrateur produit puisse créer des menus, et que les bons prix soient comptabilisés.</p><p>On veut aussi pouvoir créer des offres promotionnelles. Ça impacte l’administrateur produit et l’administrateur marketing. On va vouloir mettre en avant l’offre pour le client.</p><p>Une autre façon d’inciter à la vente est de proposer un programme de fidélité. Ça veut dire créer un programme ou se greffer à un existant, garder un historique des commandes. Et intégrer les réductions ou gratuités offertes par le programme.</p><p>Question : est ce que le client doit souscrire explicitement au programme de fidélité (ce qui entraîne une fonctionnalité à part) ou est ce qu’on récompense simplement les achats réguliers ?</p><p>En parlant de réduction, on peut mettre en place un système de coupon, qui peut être utilisé par le marketing pour des offres. Pour le confort du client et aussi pour l’inciter à acheter, on peut proposer un système de favoris ou de rappel de la dernière commande. D’ailleurs, pour inciter à acheter plus, on peut mettre en place un système de suggestions et d’upsell.</p><p>Enfin, pour que l’expérience soit intéressante pour le client, il faut qu’à son arrivée en salle il ait son sac de snack à temps et sans problèmes. Donc il faudra porter une attention à l’outillage des préparateurs et distributeurs. On en revient à la question de leur organisation physique qu’il faudra creuser immédiatement.</p><!--kg-card-begin: html--><div class="toast__container">
+  <div class="toast__cell">
+
+    <div class="toast toast--yellow add-margin">
+      <div class="toast__content">
+
+        <div class="toast__message">
+ 			Interesting :
+            <ul>
+
+<li>Menus de snacks</li>
+<li>Moyen pour l’admin produit de gérer les menus</li>
+<li>Offres promotionnelles</li>
+<li>Moyen pour l’admin produit de gérer les offres</li>
+<li>Moyen pour l’admin marketing de gérer les offres et de les mettre en avant</li>
+<li>Programme de fidélité</li>
+<li>Réductions et gratuité dans le panier</li>
+<li>Système de coupons / code promo</li>
+<li>Snacks favoris du client ou rappel du dernier achat</li>
+<li>Suggestions pour compléter le panier ou prendre des tailles supérieures ou des menus (upsell)</li>
+<li>Outils adaptés pour les préparateurs et distributeurs en salle</li>
+                </ul>
+Questions :
+                <ul>
+<li>Vrai programme de fidélité avec création d’un compte spécifique ou simple compteur intégré au compte existant ?</li>                
+            </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div><!--kg-card-end: html--><h2 id="edgy">Edgy</h2><p><strong>Dans cette partie, on se demande “qu’est ce qui se passe si … ?”</strong>. C’est à ce moment là qu’on est bien content d’avoir un testeur et un développeur dans la réunion. C’est aussi à ce moment là qu’on lève le plus de questions auxquelles on aura pas la réponse en séance. Ce n’est pas grave, c’est un des objectifs de cette réunion.</p><p>La contrepartie physique de la fonctionnalité est une source d’erreurs et de problèmes qu’il faut essayer de prévoir.</p><p>Qu’est ce qu’il se passe si le client ne vient pas ? Il a payé, mais son sac n’est pas utilisé. Certains aliments seront à jeter, d’autres peuvent être réutilisés pour la séance suivante. Est ce qu’on prévoit un système dans l’outil pour tracer les sacs restants et leur contenu ? Est ce qu’on doit pousser et intégrer le contenu des sacs non utilisés dans l’outil de préparation ? Il faut savoir à quelle fréquence des clients ayant acheté leur billet ne viennent pas.</p><p>Qu’est ce qu’il se passe si le client est en retard ? Il faudra qu’il puisse récupérer son sac, mais a priori il n’y a rien à faire dans l’outil pour ce cas là.</p><p>Qu’est ce qu’il se passe si le contenu du sac n’est pas le bon ? Il faudrait attacher au sac la liste commandée pour que le client ait une preuve et puisse contester en cas de problème.</p><p>Qu’est ce qu’il se passe si il manque un sac ? Le client doit pouvoir montrer facilement qu’il avait passé une commande, et les préparateurs doivent pouvoir réagir avant le début de la séance.</p><p>Qu’est ce qu’il se passe si il y a beaucoup de snacks, donc plusieurs sacs (gros groupe, grande famille) ? Le risque c’est d’en oublier un et de rendre difficile la vérification du contenu.</p><p>Est ce que c’est à nous de gérer la répartition des snacks en plusieurs sac dans l’outil des préparateurs ? Il faudra en tout cas dans un premier temps tracer les occurrences de contenus trop grands pour une seule commande.</p><!--kg-card-begin: html--><div class="toast__container">
+  <div class="toast__cell">
+
+    <div class="toast toast--yellow add-margin">
+      <div class="toast__content">
+
+        <div class="toast__message">
+ 			Edgy :
+            <ul>
+<li>Tracer les sacs restants (client absent)</li>
+<li>Tracer les problèmes de contenu de sac ou d’absence de sac</li>
+<li>Permettre aux préparateurs d’attacher la liste des snacks au sac</li>
+<li>Permettre aux clients de montrer facilement le contenu de leur commande aux distributeurs en cas de problème</li>
+<li>Tracer les commandes trop grosses pour un seul sac</li>
+                </ul>
+Questions :
+                <ul>
+<li>Combien de clients ayant acheté un billet ne viennent pas ?</li>
+<li>Que faire des surplus ?</li>
+<li>Quelle est la proportion de grands groupes ou grandes familles qui commandent leurs places d’un coup ?</li>
+<li>Comment on gère les plaintes suites à un problème de contenu de sac ?</li>
+            </ul>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div><!--kg-card-end: html--><h2 id="risky">Risky</h2><p><strong>Dans cette partie on souhaite se concentrer sur les cas risqués : ceux qui auraient des conséquences graves en cas de problème, ou qui sont complexe à gérer.</strong></p><p>Un premier cas risqué est la vente d’alcool. Comme il est interdit d’en vendre à des mineurs, il faudrait mettre en place un certain nombre de contrôles, en ligne comme en salle. La moindre faille dans nos contrôles entraînerait de lourdes amendes. Donc il faut creuser les chiffres sur la vente d’alcool aujourd’hui et déterminer si le gain potentiel vaut la complexité et le risque.</p><p>Un autre risque est la vente de produits frais, comme les glaces. Ces produits empêchent de préparer les sacs en avance, et gérer un flux tendu devient très complexe, parce qu’on risque de ne pouvoir servir personne si un problème interrompt le flux. Donc même chose qu’avant : il faut comparer les gains espérés avec le coût et le risque.</p><p>En parlant de préparation : gérer les commandes de snack pour le jour même est très complexe ! On doit alors avoir une notion de stocks au moment de l’achat et retirer les produits qui sont épuisés. Et qu’est ce qu’il se passe si plusieurs personnes commandent le dernier exemplaire d’un produit en même temps ? Ou s’il y a une latence réseau sur mobile qui fait qu’au moment de la mise en panier le produit est disponible mais à l’achat il ne l’est plus ? Et comment on gère un client qui prend sa place et ses snacks 5 minutes avant le début de la séance ?</p><p>Il faudra pour ce cas là aussi peser le pour et le contre.</p><p>Enfin un dernier risque est la disparité des tailles de salles ou de complexes de cinémas. Les volumes ne seront pas les mêmes, les processus et l’organisation non plus. On risque de devoir proposer une version de l’outil différente pour chaque type de salle. Il faut voir si à trop essayer de proposer une version générique on ne risque pas de ne satisfaire personne ?</p><!--kg-card-begin: html--><div class="toast__container">
+  <div class="toast__cell">
+
+    <div class="toast toast--yellow add-margin">
+      <div class="toast__content">
+
+        <div class="toast__message">
+ 			Risky :
+            <ul>
+
+<li>Vente d’alcool</li>
+<li>Protection des mineurs</li>
+<li>Vente de produits frais (glaces)</li>
+<li>Vente de snack pour le jour même</li>
+<li>Gestion en temps réel des stocks, avec protection contre les achats concurrents</li>
+<li>Outillage adapté au différents volumes et tailles de salles</li>
+                </ul>
+Questions :
+                <ul>
+<li>Combien rapporte la vente d’alcool et est ce que ça vaut le risque de la proposer ?</li>
+<li>Combien rapporte la vente de glaces et est ce que ça vaut le risque ?</li>
+<li>Est ce qu’on veut proposer la vente de snack le jour même, et si oui, jusqu’au dernier moment ?</li>
+<li>Est ce qu’on peut trouver le moyen de faire un outil générique ou est ce qu’il faut l’adapter à chaque type de salle ?</li>
+                
+            </ul>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div><!--kg-card-end: html--><h2 id="priorisation">Priorisation</h2><!--kg-card-begin: image--><figure class="kg-card kg-image-card"><img src="../content/images/2019/12/Convergent_thinking_vs_divergent_thinking_3.png" class="kg-image"></figure><!--kg-card-end: image--><p>Maintenant qu’on a listé tous les cas auxquels on a pensé, il est temps d’en faire le tri. <strong>On va faire trois catégories : ce qu’il faut faire d’abord, ce qu’il faut faire ensuite et ce qu’on ne va pas faire du tout.</strong> Il faut aussi répondre rapidement à nos questions.</p><p>La première catégorie correspond au minimum de cas qui permettent la première mise en production. Le chemin le plus court vers une première utilisation par les clients. Parce que la première question qu’on se pose c’est : “est ce que ça vaut vraiment le coup de vendre les snacks en ligne ?”. Si on n’obtient pas un “OUI” franc et massif, alors ce n’est pas une bonne idée de continuer à dérouler la liste de tous les cas. Il faudra revoir notre copie ou carrément revenir en arrière.</p><p>Donc pour la version minimale, on veut activer la vente pour quelques salles sélectionnées, mais on n’a pas encore besoin du système générique d’activation de salles. On souhaite vendre des snacks avec les places jusqu’à J-1, pour éviter la gestion en temps réel des stocks. On veut proposer une page simple pour la préparation des sacs, avec un système pour imprimer une étiquette contenant la liste des achats à attacher aux commandes et un moyen simple pour le client de vérifier sa commande. On veut s’interfacer avec le gestionnaire de stock (page simple ou connexion à son outil). On veut intégrer la vente au système existant, en prenant en compte la TVA. Et enfin, très important, on va vouloir ajouter tous les traceurs, pour pouvoir améliorer la solution au fil des livraisons.</p><p>Ensuite, on regarde la 3ème catégorie, ce qu’on sait déjà qu’on ne souhaite pas faire. Dans les grandes entreprises, c’est toujours délicat de dire non à un élément, donc l’idée ici est de se dire “on pense qu’il vaut mieux ne pas traiter ce point car … “ et ensuite aller défendre l’idée auprès des sponsors et décideurs.</p><p>Ici par exemple, on souhaite éviter à tout prix la gestion en temps réel des stocks, parce qu’en traitant ce sujet, on double la complexité du projet. Mais si une part non négligeable des clients achètent leurs places le jour même, on risque de ne pas avoir le choix. Il faut très rapidement avoir les chiffres sur ce sujet. Pareil pour la vente d’alcool.</p><p>Enfin ce qui rentre dans la 2ème catégorie, c’est le reste. C’est ce qu’on souhaite faire, mais plus tard. Il n’y a pas besoin de faire des priorités dans ce groupe : en apprenant de la première livraison, on verra à ce moment là quel chemin est le plus intéressant à suivre.</p><p>En observant en live, on va se dire “ah il faut vraiment pouvoir changer les produits régulièrement !” ou “il faut vraiment aider les préparateurs, c’est très compliqué à l’heure actuelle !” ou “ça marche vraiment auprès des clients, il faut qu’on lance une campagne marketing et qu’on active des salles dans toutes les grandes villes !”. Et la priorisation se fera d’elle même. </p><p>Si vous vous enfermez dans une roadmap fixe avant de savoir ce qui marche, vous risquez par exemple d’être en plein développement de l’outillage pour les admins quand on souhaite rapidement créer des offres.</p><h2 id="r-sultat-de-l-atelier">Résultat de l'atelier</h2><!--kg-card-begin: html--><div class="toast__container">
+  <div class="toast__cell">
+
+    <div class="toast toast--yellow add-margin">
+      <div class="toast__content">
+
+        <div class="toast__message">
+ 			Acteurs :
+            <ul>
+<li>Client web mobile</li>
+<li>Client desktop</li>
+<li>Client ponctuel</li>
+<li>Client carte illimitée</li>
+<li>Client solo</li>
+<li>Client groupe</li>
+<li>Client famille</li>
+<li>Personnel préparateur</li>
+<li>Personnel distributeur</li>
+<li>Personnel gestionnaire stock</li>
+<li>Administrateur marketing</li>
+                </ul>
+            Cas à faire au début :
+            <ul>
+<li>Achat place + snacks</li>
+<li>Achat place sans snacks</li>
+<li>Faire attention à la TVA</li>
+<li>Écran de préparation par séance</li>
+<li>Transmettre les besoins au gestionnaire de stock</li>
+<li>Tracer les sacs restants (client absent)</li>
+<li>Tracer les problèmes de contenu de sac ou d’absence de sac</li>
+<li>Permettre aux préparateurs d’attacher la liste des snacks au sac</li>
+<li>Permettre aux clients de montrer facilement le contenu de leur commande aux distributeurs en cas de problème</li>
+<li>Tracer les commandes trop grosses pour un seul sac</li>
+                </ul>
+ 			Cas à faire ensuite :
+            <ul>
+<li>Moyen d’administrer les produits</li>
+<li>Activation/désactivation manuelle de la vente de snack pour chaque salle</li>
+<li>Menus de snacks</li>
+<li>Moyen pour l’admin produit de gérer les menus</li>
+<li>Offres promotionnelles</li>
+<li>Moyen pour l’admin produit de gérer les offres</li>
+<li>Moyen pour l’admin marketing de gérer les offres et de les mettre en avant</li>
+<li>Programme de fidélité</li>
+<li>Réductions et gratuité dans le panier</li>
+<li>Système de coupons / code promo</li>
+<li>Snacks favoris du client ou rappel du dernier achat</li>
+<li>Suggestions pour compléter le panier ou prendre des tailles supérieures ou des menus (upsell)</li>
+<li>Outils adaptés pour les préparateurs et distributeurs en salle</li>
+<li>Vente de produits frais (glaces)</li>
+<li>Outillage adapté au différents volumes et tailles de salles</li>
+                </ul>
+ 			Cas hors scope :
+            <ul>
+<li>Vente d’alcool</li>
+<li>Protection des mineurs</li>
+<li>Vente de snack pour le jour même</li>
+<li>Gestion en temps réel des stocks, avec protection contre les achats concurrents</li>
+                </ul>
+
+Questions :
+                <ul>
+<li>Quels sont les parcours typiques des clients illimités ? Il faut plus de données.</li>
+<li>Comment vont être organisés physiquement les préparateurs et les distributeurs ?</li>
+<li>Interface avec outil existant ou écran pour gestionnaire stock et pour admin produits ?</li>
+<li>Vrai programme de fidélité avec création d’un compte spécifique ou simple compteur intégré au compte existant ?</li>
+<li>Combien de clients ayant acheté un billet ne viennent pas ?</li>
+<li>Que faire des surplus ?</li>
+<li>Quelle est la proportion de grands groupes ou grandes familles qui commandent leurs places d’un coup ?</li>
+<li>Comment on gère les plaintes suites à un problème de contenu de sac ?</li>
+<li>Combien rapporte la vente d’alcool et est ce que ça vaut le risque de la proposer ?</li>
+<li>Combien rapporte la vente de glaces et est ce que ça vaut le risque ?</li>
+<li>Est ce qu’on veut proposer la vente de snack le jour même, et si oui, jusqu’au dernier moment ?</li>
+<li>Est ce qu’on peut trouver le moyen de faire un outil générique ou est ce qu’il faut l’adapter à chaque type de salle ?</li>
+                
+            </ul>
+            
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div><!--kg-card-end: html--><h2 id="remarques-g-n-rales-sur-l-atelier">Remarques générales sur l’atelier</h2><p>TIER c’est juste une grille de lecture, une façon de vous aider à penser à des cas. Ce n’est pas grave si un cas est dans une catégorie plutôt qu’une autre, ou si vous voulez le mettre dans plusieurs. C’est pour ça qu’à la fin, cette catégorisation a disparu, remplacée par celle qui est importante : la priorisation.</p><p>Vous n’allez pas penser à tout en une séance. Au fur et à mesure de votre avancement vous allez découvrir des nouveaux cas. Ce n’est pas grave. Mais c’est une bonne idée de noter ces cas que vous n’aviez pas vu, pour vous rappeler d’y penser lors du prochain atelier sur la prochaine fonctionnalité.</p><p>Pour s’aider lors de la séance, c’est bien de représenter visuellement les acteurs et les cas, sous la forme d’un tableau ou d’une mindmap, avec des postits ou en ligne. Avoir toujours sous les yeux la liste des acteurs par exemple, va vous aider pour la découverte des cas.</p><p>Enfin, vous avez tout intérêt à formaliser la liste finale avec les acteurs, les cas priorisés et les questions dans un document ou encore mieux dans le wiki où vous mettez votre documentation. C’est un bon document de travail.</p><h2 id="a-vous-maintenant">A vous maintenant</h2><p>Cet atelier fonctionne sur les grosses fonctionnalité comme on vient de voir, mais aussi sur les plus petites.</p><p>Essayez de votre côté de l’appliquer sur l’une des fonctionnalités suivantes :</p><ul><li>On veut permettre à nos clients de réserver en ligne dans nos restaurants</li><li>On veut intégrer un compteur automatique de points dans nos babyfoots</li><li>J’ai des capteurs dans mon jardin et je veux savoir quand une de mes plantes a besoin d’eau.</li><li>Même chose mais pour une exploitation agricole.</li></ul><p>Voilà, amusez vous bien :)</p>
+                </div>
+            </section>
+
+
+            <footer class="post-full-footer">
+
+
+            </footer>
+
+
+        </article>
+
+    </div>
+</main>
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+                <article class="read-next-card" style="background-image: url(../content/images/size/w600/2023/09/Capture-d-e-cran-2023-09-08-a--15.50.42-2.png)">
+                    <header class="read-next-card-header">
+                        <small class="read-next-card-header-sitetitle">&mdash; Agile &#x3D;&#x3D; Produit &mdash;</small>
+                        <h3 class="read-next-card-header-title"><a href="../tag/product-management/">Product Management</a></h3>
+                    </header>
+                    <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                    <div class="read-next-card-content">
+                        <ul>
+                            <li><a href="../explorez-vos-opportunites-avec-les-jobs/">Explorez vos opportunités avec les Jobs</a></li>
+                            <li><a href="../tips-pour-les-interviews-utilisateurs/">Tips pour vos interviews utilisateurs</a></li>
+                            <li><a href="../deux-outils-dux-pour-le-product-owner-et-le-product-manager/">Deux outils d&#x27;UX pour le Product Owner et le Product Manager</a></li>
+                        </ul>
+                    </div>
+                    <footer class="read-next-card-footer">
+                        <a href="../tag/product-management/">See all 5 posts →</a>
+                    </footer>
+                </article>
+
+
+        </div>
+    </div>
+</aside>
+
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="../">
+            <span>Agile &#x3D;&#x3D; Produit</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Cas pratique : exemple d&#x27;atelier de découpe d&#x27;user stories</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Cas%20pratique%20%3A%20exemple%20d'atelier%20de%20d%C3%A9coupe%20d'user%20stories&url=https://maximearnstamm.github.com/blog/cas-pratique-exemple-datelier-de-decoupe-duser-stories/" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://maximearnstamm.github.com/blog/cas-pratique-exemple-datelier-de-decoupe-duser-stories/" onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+        </a>
+    </div>
+    <progress id="reading-progress" class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+
+
+  <footer class="site-footer outer">
+    <div class="site-footer-content inner">
+      <section class="copyright"><a href="../">Agile &#x3D;&#x3D; Produit</a> &copy; 2019-2023</section>
+      <nav class="site-footer-nav">
+        <a href="../">Accueil</a>
+        <a href="../tag/product-management/">Product Management</a>
+        <a href="../tag/agile/">Agile</a>
+        <a href="../tag/management/">Management</a>
+        <a href="https://twitter.com/MaximeArnstamm" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://ghost.org" target="_blank" rel="noopener">Fait avec Ghost</a>
+      </nav>
+    </div>
+  </footer>
+
+  </div>
+
+
+  <script>
+    var images = document.querySelectorAll('.kg-gallery-image img');
+    images.forEach(function(image) {
+      var container = image.closest('.kg-gallery-image');
+      var width = image.attributes.width.value;
+      var height = image.attributes.height.value;
+      var ratio = width / height;
+      container.style.flex = ratio + ' 1 0%';
+    })
+  </script>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous">
+  </script>
+  <script type="text/javascript" src="../assets/built/jquery.fitvids.js"></script>
+
+
+
+
+  <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('#reading-progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+
+});
+</script>
+
+
+  
+
+</body>
+
+</html>

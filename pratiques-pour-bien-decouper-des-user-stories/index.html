@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Pratiques pour bien découper des user stories</title>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="../assets/built/screen.css">
+  <link rel="stylesheet" type="text/css" href="../assets/built/algolia-min.css">
+
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://maximearnstamm.github.com/blog/pratiques-pour-bien-decouper-des-user-stories/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="https://maximearnstamm.github.com/blog/pratiques-pour-bien-decouper-des-user-stories/amp/">
+    
+    <meta property="og:site_name" content="Agile &#x3D;&#x3D; Produit">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Pratiques pour bien découper des user stories">
+    <meta property="og:description" content="Bien découper ses user stories c&#x27;est plus important que vous ne le pensez. Comment trouver plus facilement des axes de découpes ? Comment s&#x27;appuyer sur le reste de l&#x27;équipe pour réussir cet exercice ?">
+    <meta property="og:url" content="https://maximearnstamm.github.com/blog/pratiques-pour-bien-decouper-des-user-stories/">
+    <meta property="article:published_time" content="2019-12-10T13:31:27.000Z">
+    <meta property="article:modified_time" content="2019-12-10T14:48:07.000Z">
+    <meta property="article:tag" content="Product Management">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Pratiques pour bien découper des user stories">
+    <meta name="twitter:description" content="Bien découper ses user stories c&#x27;est plus important que vous ne le pensez. Comment trouver plus facilement des axes de découpes ? Comment s&#x27;appuyer sur le reste de l&#x27;équipe pour réussir cet exercice ?">
+    <meta name="twitter:url" content="https://maximearnstamm.github.com/blog/pratiques-pour-bien-decouper-des-user-stories/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Maxime">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Product Management">
+    <meta name="twitter:site" content="@MaximeArnstamm">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Agile &#x3D;&#x3D; Produit",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://maximearnstamm.github.com/blog/favicon.ico",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Maxime",
+        "url": "https://maximearnstamm.github.com/blog/author/maxime/",
+        "sameAs": []
+    },
+    "headline": "Pratiques pour bien découper des user stories",
+    "url": "https://maximearnstamm.github.com/blog/pratiques-pour-bien-decouper-des-user-stories/",
+    "datePublished": "2019-12-10T13:31:27.000Z",
+    "dateModified": "2019-12-10T14:48:07.000Z",
+    "keywords": "Product Management",
+    "description": "Bien découper ses user stories c&#x27;est plus important que vous ne le pensez. Comment trouver plus facilement des axes de découpes ? Comment s&#x27;appuyer sur le reste de l&#x27;équipe pour réussir cet exercice ?",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://maximearnstamm.github.com/blog/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 2.20">
+    <link rel="alternate" type="application/rss+xml" title="Agile &#x3D;&#x3D; Produit" href="https://maximearnstamm.github.com/blog/rss/">
+    <script src="https://getinsights.io/js/insights.js"></script>
+<script>
+insights.init('bhV7j2fLLdlYrJKy');
+insights.trackPages();
+</script>
+
+<style>
+.toast {
+  text-align:left;
+    padding: 21px 0;
+    border-radius:4px;
+    top: 0px;
+    position:relative;
+    box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.2);
+    border: 1px solid #E3E3E3;
+    margin-bottom: 1.5em;
+}
+    
+.toast:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+  border-top-left-radius:4px;
+  border-bottom-left-radius: 4px;
+}
+
+.toast__type {
+  color: #3e3e3e;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.toast__message {
+    margin-top: 0;
+  margin-bottom: 0;
+    color: #878787;
+}
+
+.toast__message p {
+    margin-bottom:10px !important;
+}
+
+.toast__content{
+  padding-left:70px;
+  padding-right:60px;
+}
+
+.toast--blue .toast__icon{
+  background-color:#1D72F3;
+}
+
+.toast--blue:before{
+  background-color:#1D72F3;
+}
+
+</style>
+
+</head>
+
+<body class="post-template tag-product-management">
+
+  <div class="site-wrapper">
+
+    
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+                <a class="site-nav-logo" href="../">Agile &#x3D;&#x3D; Produit</a>
+    </div>
+</nav>
+    </div>
+</header>
+
+
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post tag-product-management no-image">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="2019-12-10">10 décembre 2019</time>
+                        <span class="date-divider">/</span> <a href="../tag/product-management/">Product Management</a>
+                </section>
+                <h1 class="post-full-title">Pratiques pour bien découper des user stories</h1>
+            </header>
+
+
+            <section class="post-full-content">
+                <div class="post-content">
+                    <!--kg-card-begin: html--><div class="toast__container">
+  <div class="toast__cell">
+
+    <div class="toast toast--blue add-margin">
+      <div class="toast__content">
+        <h3 class="toast__type">
+            <img style="margin:0px !important; display:inline !important; width:24px !important; vertical-align: text-bottom;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAsVBMVEVHcEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACDtcvRAAAAOnRSTlMAJLQUZgH74SL5LRPc0aJAAm5Ptruhkfb65LXjpeiapA5qCA31dDZf5WTqaXM1Xpvw7v0z3eLnMRFOa6dgVwAAALNJREFUKM+dkkcSwyAMRXGJE/fe03vvlfsfLDMCBmN2/iv0HyAhgVBXTfWqLHInjQLB7h32mMr1G/58iLmMkO+fYEE6AzMS329XsjAt4i9GJO6jAT0SE6DTsP5+2GUKgApLOgKoWTnPFwMe1FTgdg6cwImlDFQAjgzGAFIZnAFEEjBtAIFLwvfjR0FGW+Ib4itKjTUrFPz8xPu+M7m/XTcnZcUsb6a1ZqusvES9bOzOnwP9AYmLPf/w/1vKAAAAAElFTkSuQmCC">
+            Fiche pratique</h3>
+        <div class="toast__message">
+              <ul>
+                  <li>Bien découper ses user stories c’est plus important que vous ne le pensez.</li>
+                  <li>La taille idéale de story c’est quand un développeur peut commencer et finir 2 ou 3 stories à la suite dans une même journée.</li>
+                  <li>C’est compliqué de découper, heureusement on peut faire ça en groupe.</li>
+                  <li>L’atelier proposé dans l’article est le moyen le plus efficace que je connaisse pour bien découper les stories, c’est pour ça que j’en ai <a href="https://maximearnstamm.github.io/blog/cas-pratique-exemple-datelier-de-decoupe-duser-stories/">écrit un exemple</a></li>
+               
+                  
+            </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div><!--kg-card-end: html--><p>Dans l’agilité, savoir bien découper ses US, c’est le nerf de la guerre. C’est une compétence qui s’apprend mais qui demande du travail. Heureusement, c’est quelque chose qui peut se faire à plusieurs.</p><p><strong>Attention : il existe plein d’autres articles sur comment découper, prenez le temps de les lire. Celui-ci vient en complément.</strong></p><h2 id="des-petites-stories-un-probl-me-d-ordre-1">Des petites stories : un problème d’ordre 1</h2><p>Plus les stories sont grosses, plus on aura de problèmes : Incompréhensions, ambiguïtés, oublis, erreurs… Et aussi stress pour finir dans le sprint, ce qui entraîne d’autres problèmes.</p><p>Les grosses stories empêchent aussi l’équipe de réagir avec agilité : quand on doit gérer un imprévu, il y a très peu de créneaux disponibles entre deux stories, ce qui force en général à s’interrompre dans sa tâche. Et ça entraîne des pertes de focus, de temps et d’autres erreurs.</p><p><strong>La taille idéale de story c’est quand un développeur peut commencer et finir 2 ou 3 stories à la suite dans une même journée</strong>.</p><p>C’est l’étoile du Nord. C’est l’objectif que doit se donner chaque product owner : apprendre à découper ses stories jusqu’à atteindre la taille idéale.</p><p>Bien sûr, ce n’est pas le but. On demande au PO de délivrer un projet. Mais comme pour un musicien : si le but c’est que la musique soit bien, savoir bien jouer de son instrument est quand même un sacré atout.</p><h2 id="conseil-n-1-partez-des-fonctionnalit-s">Conseil n°1 : Partez des fonctionnalités</h2><p>Un bon moyen de mieux voir comment découper les user stories, c’est de faire la part des choses entre la fonctionnalité et la user story.</p><p><strong>La user story est un élément temporaire et arbitraire qui n’a de sens que parce qu’il nous aide à fluidifier notre réalisation</strong>. Une fois la story terminée, elle n’a plus de raison d’être, comme une goutte d’eau qui remplit un verre.</p><p><strong>La fonctionnalité est l’élément le plus petit qui a un sens pour toutes les parties concernées par le projet / produit</strong>. C’est la fonctionnalité, c’est à dire un changement dans le comportement de l’utilisateur, qui apporte de la valeur, c’est elle qu’on va marketer.</p><p>Note : je n’utilise jamais les Epic, parce que ça n’a pas vraiment de sens pour moi. C’est un groupement d’user stories mais sans focus sur la valeur, donc moins intéressant que la fonctionnalité.</p><p>Parfois les fonctionnalités seront la taille d’une seule user story, parfois ça représentera un certain nombre de sprints ou sera répartie sur plusieurs équipes.</p><p>Bien souvent, en découpant la fonctionnalité en user stories, on verra apparaître une hiérarchie dans l’importance et l’intérêt des éléments. Ce qui aidera à la priorisation et donnera souvent lieu à une réduction du périmètre.</p><p>Prenons pour exemple une fonctionnalité de livraison en point relais. On souhaite offrir cette nouvelle possibilité aux clients pour essayer de réduire le taux d’abandon de panier (c’est la valeur qu’on cherche à capter). Une partie de cette fonctionnalité va concerner le choix du point relais.</p><!--kg-card-begin: image--><figure class="kg-card kg-image-card"><img src="../content/images/2019/12/decoupage-point-relais.png" class="kg-image"></figure><!--kg-card-end: image--><p>Dans l’image on peut voir un exemple de page complète de choix de point relais. Encadré en rouge, on voit différent composants, qui peuvent être ajoutés au fur et à mesure. <strong>Chaque composant est un axe potentiel de découpe.</strong></p><p>Bonus : en découpant, on va très vite voir se profiler une priorisation. Dans notre cas, on peut très bien commencer la fonctionnalité avec un simple choix entre trois relais près de chez le client. En livrant seulement cette partie, on pourra valider que les clients utilisent bien la fonctionnalité et on pourra constater l’incidence positive sur le taux d’abandon. Ensuite, on pourra ajouter progressivement des éléments pour capter un maximum de la valeur.</p><p>Un autre avantage de toujours commencer par la fonctionnalité plutôt que de se pencher directement dans les user stories, c’est la vision globale : <strong>en se positionnant du point de vue de chaque segment d’utilisateur, on fera apparaître leurs interactions particulières, et ça mettra en avant d’autres axes potentiels de découpe</strong>.</p><h2 id="conseil-n-2-pensez-inest">Conseil n°2 : Pensez INEST</h2><p>Découper les stories c’est compliqué. D’autant plus quand on se base sur un standard qui n’est pas adapté à la situation.</p><p>On apprend tous l’acronyme INVEST pour caractériser le minimum acceptable en terme de story. Pour simplifier : on doit imaginer que chaque story est livrable en production immédiatement après être terminée et apporte de la valeur à l’utilisateur.</p><p>Or, dans 99% des entreprises aujourd’hui, on ne fait pas de continuous delivery. On ne livre pas chaque user story une fois qu’elle est finie.</p><p>Et on a du mal à attribuer de la valeur à chaque user story. Il suffit de regarder les “afin de” de chaque story pour s’en rendre compte.</p><p>Donc on s’embrouille, on se dit “ça n’a pas de sens de découper encore plus la story” et “on ne peut pas livrer sans avoir géré tous ces cas”. Et on se retrouve avec des trop grosses stories.</p><p>Ce que je conseille dans ces cas là, même si ce n’est pas orthodoxe, c’est de travailler la valeur (le V)  au niveau de la fonctionnalité et de faire des stories INEST, autrement dit : des petites stories qu’on peut tester au niveau fonctionnel / utilisateur.</p><p><strong>En pensant INEST, c’est à dire à des petits éléments testables et incrémentaux, chaque règle fonctionnelle, chaque cas, devient un axe potentiel de découpe.</strong> On peut quasiment se dire que chaque test fonctionnel est un axe de découpe.</p><p>Attention par contre, ça ne vous aidera pas à vous améliorer sur la démarche produit, mais dans une entreprise où votre rôle c’est de dérouler une roadmap déjà établie, c’est parfait.</p><h2 id="conseil-n-3-utilisez-cet-atelier-d-coupe-3-amigos-example-mapping-tier-">Conseil n°3 : Utilisez cet atelier découpe (3 Amigos + Example mapping + TIER)</h2><p>Un excellent moyen pour mieux découper les fonctionnalités en petites user stories, c’est de ne pas le faire tout seul. Cet atelier à plusieurs est assez simple à mettre en place et offre des résultats immédiats et très intéressants.</p><h3 id="l-atelier">L’atelier</h3><p><strong>L’objectif de cet atelier est de faire émerger de nombreux axes de découpe</strong>.</p><p>Idéalement, il faut déclencher cet atelier après avoir dégrossi la fonctionnalité avec les experts fonctionnels, l’archi et l’UX, mais avant d’avoir commencé les spécifications et les maquettes.</p><p>Pour les premières fois, ne vous mettez pas de limite de temps. Par la suite, vous aurez l’expérience pour savoir combien de temps cet atelier vous prend.</p><p>Doivent être présents : le product owner, au moins un développeur, au moins un testeur et l’ux, s’il y en a un dans l’équipe. Parfois vous voudrez aussi inviter un architecte.</p><p>Dans un premier temps, le PO va présenter la fonctionnalité : ce qu’on veut faire, pourquoi on veut le faire, qu’est ce que ça apporte aux utilisateurs, qu’est ce que ça apporte à l’entreprise, qu’est ce qui nous permet de croire que cette fonctionnalité va apporter ce qui est prévu etc.</p><p>Ensuite, ensemble, vous allez essayer de lister tous les cas possibles. Une grille utile pour penser aux cas, c’est de suivre TIER : Typical, Interesting, Edgy, Risky.</p><p>Passez ensemble sur tous les cas normaux, prenez le temps de faire un focus sur les cas vraiment intéressants, posez vous la question “qu’est ce qui se passe si … ?” pour trouver les cas à la marge, et enfin prenez garde à identifier les situations risquées.</p><p>En listant tous les cas, vous allez voir émerger des groupes : ce qui est indispensable, ce qui est bonus, ce qui est hors scope pour l’instant ou définitivement. Vous allez aussi avoir un meilleur aperçu de la complexité. Et enfin vous allez lever un certain nombre de questions qu’il vaut mieux se poser à ce moment là qu’une fois la réalisation démarrée.</p><p>C’est important de voir large pendant l’atelier et d’élaguer ensuite : ça permet d’avoir une vision d’ensemble et de pouvoir définir explicitement le périmètre.</p><p>En plus d’une liste d’axe de découpe, vous allez produire des éléments qui vous aideront à écrire les spécifications et les tests dans cet atelier, ce qui est un bonus intéressant.</p><p>Pour plus d’infos sur comment mener ce genre d’atelier, je vous conseille de lire ces articles sur <a href="https://johnfergusonsmart.com/three-amigos-requirements-discovery/">les 3 amigos</a> et sur <a href="https://cucumber.io/blog/example-mapping-introduction/">l’example mapping</a>.</p><!--kg-card-begin: html--><div class="toast__container">
+  <div class="toast__cell">
+
+    <div class="toast toast--yellow add-margin">
+      <div class="toast__content">
+
+        <div class="toast__message">
+              <p>
+                  Comment vous feriez pour découper cette fonctionnalité ?
+            </p>
+<p><i>Je veux vendre des snacks en ligne en même temps que les places de cinéma, et les clients pourront récupérer leur sac en allant dans la salle.</i><br><br>
+Comme cet atelier est important, j’ai déroulé en détail l’atelier sur cet exemple dans <a href="https://maximearnstamm.github.io/blog/cas-pratique-exemple-datelier-de-decoupe-duser-stories/">un autre article</a>.
+            </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div><!--kg-card-end: html--><h3 id="apr-s-l-atelier">Après l’atelier</h3><p>Dans cet atelier vous allez produire un certain nombre de cas. Ce sont déjà des axes de découpe. Certains cas seront ensuite à découper plus finement en suivant INEST si vous sentez qu’ils sont assez large.</p><p>En sortant de l’atelier, vous aurez en main assez d’éléments pour commencer à prioriser les cas, et être capable de faire la part entre ce qui doit absolument sortir le plus vite possible et les différents étapes suivantes si la fonctionnalité marche.</p><p>Cette priorisation aidera le PO et l’UX à mieux concevoir la fonctionnalité, en prenant en compte le caractère incrémental de la solution.</p><p>Pour prendre un cas concret, si on revient sur la page de choix de relais colis :</p><ul><li>Si on a prévu la solution et les écrans en prenant tout en compte, mais que finalement on ne met pas en place la carte, le résultat risque d’être bancal, avec un gros trou au milieu de la page.</li><li>Si on prend en compte le fait que les éléments de confort seront rajoutés progressivement, on peut prévoir à l’avance de faire un écran qui s’adaptera au fur et à mesure.</li></ul><!--kg-card-begin: hr--><hr><!--kg-card-end: hr--><h2 id="bonus-arr-tez-avec-en-tant-que-afin-de-">Bonus: Arrêtez avec “En tant que … afin de”</h2><p>Le but de cette phrase rituelle, que tout le monde connaît, c’était de vous forcer à penser à deux choses très importantes.</p><p>Malheureusement, dans la plupart des cas, personne n’y fait attention. N’y trouvant aucun intérêt, les PO vont l’écrire à la va vite, et les développeurs ne vont même pas la lire.</p><p>Pourtant, vous forcer à penser à ces deux choses, c’est vital. Ce sont des informations qui aident à faire les bons choix pendant les 1000 moments où il faut prendre des micro décisions, pendant l’écriture des spécifications, le développement ou les tests.</p><p>Donc je vous propose de créer dans votre template d’user story un cadre dans lequel vous allez répondre à deux questions : Pour qui ? et Dans quel but ?</p><p><strong>Pour qui ?</strong> Quel type d’utilisateur va utiliser ce que vous allez produire ici ? Il y a plusieurs avantages à répondre à cette question :</p><ul><li>Ça vous permet de vous mettre à sa place, et de prendre en compte ses particularités. On ne va pas penser l’US de la même manière pour un administrateur dans son bureau ou pour un jeune sur son appli mobile.</li><li>Si vous êtes tentés de mettre plusieurs types d’utilisateurs, c’est qu’il y a probablement un axe de découpe.</li><li>Enfin, on arrêtera de voir “En tant que PO, je veux …”. Et c’est une "bonne chose ©".</li></ul><p><strong>Dans quel but ?</strong> Qu’est ce qu’on apporte à l’utilisateur et qu’est ce qu’on apporte à l’entreprise ? Bien trop souvent, la partie “afin de” est carrément zappée. Pourtant, partager et mettre en avant l’intention fait gagner du temps à tout le monde :</p><p>Si le but c’est de permettre à l’utilisateur d’aller plus vite, alors peut être ces 50 nouveaux champs ne sont pas la bonne idée ? Si le but c’est d’augmenter le taux de conversion, alors peut être qu’il ne vaut mieux pas rendre cette étape obligatoire ?</p><p>Au final, avec ce cadre, vous atteindrez le bon objectif, sans tomber dans le piège du rituel.</p>
+                </div>
+            </section>
+
+
+            <footer class="post-full-footer">
+
+
+            </footer>
+
+
+        </article>
+
+    </div>
+</main>
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+                <article class="read-next-card" style="background-image: url(../content/images/size/w600/2023/09/Capture-d-e-cran-2023-09-08-a--15.50.42-2.png)">
+                    <header class="read-next-card-header">
+                        <small class="read-next-card-header-sitetitle">&mdash; Agile &#x3D;&#x3D; Produit &mdash;</small>
+                        <h3 class="read-next-card-header-title"><a href="../tag/product-management/">Product Management</a></h3>
+                    </header>
+                    <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                    <div class="read-next-card-content">
+                        <ul>
+                            <li><a href="../explorez-vos-opportunites-avec-les-jobs/">Explorez vos opportunités avec les Jobs</a></li>
+                            <li><a href="../tips-pour-les-interviews-utilisateurs/">Tips pour vos interviews utilisateurs</a></li>
+                            <li><a href="../deux-outils-dux-pour-le-product-owner-et-le-product-manager/">Deux outils d&#x27;UX pour le Product Owner et le Product Manager</a></li>
+                        </ul>
+                    </div>
+                    <footer class="read-next-card-footer">
+                        <a href="../tag/product-management/">See all 5 posts →</a>
+                    </footer>
+                </article>
+
+
+        </div>
+    </div>
+</aside>
+
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="../">
+            <span>Agile &#x3D;&#x3D; Produit</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Pratiques pour bien découper des user stories</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Pratiques%20pour%20bien%20d%C3%A9couper%20des%20user%20stories&url=https://maximearnstamm.github.com/blog/pratiques-pour-bien-decouper-des-user-stories/" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://maximearnstamm.github.com/blog/pratiques-pour-bien-decouper-des-user-stories/" onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+        </a>
+    </div>
+    <progress id="reading-progress" class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+
+
+  <footer class="site-footer outer">
+    <div class="site-footer-content inner">
+      <section class="copyright"><a href="../">Agile &#x3D;&#x3D; Produit</a> &copy; 2019-2023</section>
+      <nav class="site-footer-nav">
+        <a href="../">Accueil</a>
+        <a href="../tag/product-management/">Product Management</a>
+        <a href="../tag/agile/">Agile</a>
+        <a href="../tag/management/">Management</a>
+        <a href="https://twitter.com/MaximeArnstamm" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://ghost.org" target="_blank" rel="noopener">Fait avec Ghost</a>
+      </nav>
+    </div>
+  </footer>
+
+  </div>
+
+
+  <script>
+    var images = document.querySelectorAll('.kg-gallery-image img');
+    images.forEach(function(image) {
+      var container = image.closest('.kg-gallery-image');
+      var width = image.attributes.width.value;
+      var height = image.attributes.height.value;
+      var ratio = width / height;
+      container.style.flex = ratio + ' 1 0%';
+    })
+  </script>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous">
+  </script>
+  <script type="text/javascript" src="../assets/built/jquery.fitvids.js"></script>
+
+
+
+
+  <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('#reading-progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+
+});
+</script>
+
+
+  
+
+</body>
+
+</html>

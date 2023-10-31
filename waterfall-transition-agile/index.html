@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Waterfall et transition Agile</title>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="../assets/built/screen.css">
+  <link rel="stylesheet" type="text/css" href="../assets/built/algolia-min.css">
+
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://maximearnstamm.github.com/blog/waterfall-transition-agile/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="https://maximearnstamm.github.com/blog/waterfall-transition-agile/amp/">
+    
+    <meta property="og:site_name" content="Agile &#x3D;&#x3D; Produit">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Waterfall et transition Agile">
+    <meta property="og:description" content="Comment choisir entre le modèle en V et le modèle Agile ? À quoi s&#x27;attendre lorsqu&#x27;on entreprend une transition ?">
+    <meta property="og:url" content="https://maximearnstamm.github.com/blog/waterfall-transition-agile/">
+    <meta property="article:published_time" content="2019-06-11T16:38:06.000Z">
+    <meta property="article:modified_time" content="2019-07-23T08:44:56.000Z">
+    <meta property="article:tag" content="Agile">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Waterfall et transition Agile">
+    <meta name="twitter:description" content="Comment choisir entre le modèle en V et le modèle Agile ? À quoi s&#x27;attendre lorsqu&#x27;on entreprend une transition ?">
+    <meta name="twitter:url" content="https://maximearnstamm.github.com/blog/waterfall-transition-agile/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Maxime">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Agile">
+    <meta name="twitter:site" content="@MaximeArnstamm">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Agile &#x3D;&#x3D; Produit",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://maximearnstamm.github.com/blog/favicon.ico",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Maxime",
+        "url": "https://maximearnstamm.github.com/blog/author/maxime/",
+        "sameAs": []
+    },
+    "headline": "Waterfall et transition Agile",
+    "url": "https://maximearnstamm.github.com/blog/waterfall-transition-agile/",
+    "datePublished": "2019-06-11T16:38:06.000Z",
+    "dateModified": "2019-07-23T08:44:56.000Z",
+    "keywords": "Agile",
+    "description": "Comment choisir entre le modèle en V et le modèle Agile ? À quoi s&#x27;attendre lorsqu&#x27;on entreprend une transition ?",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://maximearnstamm.github.com/blog/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 2.20">
+    <link rel="alternate" type="application/rss+xml" title="Agile &#x3D;&#x3D; Produit" href="https://maximearnstamm.github.com/blog/rss/">
+    <script src="https://getinsights.io/js/insights.js"></script>
+<script>
+insights.init('bhV7j2fLLdlYrJKy');
+insights.trackPages();
+</script>
+
+<style>
+.toast {
+  text-align:left;
+    padding: 21px 0;
+    border-radius:4px;
+    top: 0px;
+    position:relative;
+    box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.2);
+    border: 1px solid #E3E3E3;
+    margin-bottom: 1.5em;
+}
+    
+.toast:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+  border-top-left-radius:4px;
+  border-bottom-left-radius: 4px;
+}
+
+.toast__type {
+  color: #3e3e3e;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.toast__message {
+    margin-top: 0;
+  margin-bottom: 0;
+    color: #878787;
+}
+
+.toast__message p {
+    margin-bottom:10px !important;
+}
+
+.toast__content{
+  padding-left:70px;
+  padding-right:60px;
+}
+
+.toast--blue .toast__icon{
+  background-color:#1D72F3;
+}
+
+.toast--blue:before{
+  background-color:#1D72F3;
+}
+
+</style>
+
+</head>
+
+<body class="post-template tag-agile">
+
+  <div class="site-wrapper">
+
+    
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+                <a class="site-nav-logo" href="../">Agile &#x3D;&#x3D; Produit</a>
+    </div>
+</nav>
+    </div>
+</header>
+
+
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post tag-agile no-image">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="2019-06-11">11 juin 2019</time>
+                        <span class="date-divider">/</span> <a href="../tag/agile/">Agile</a>
+                </section>
+                <h1 class="post-full-title">Waterfall et transition Agile</h1>
+            </header>
+
+
+            <section class="post-full-content">
+                <div class="post-content">
+                    <!--kg-card-begin: html--><div class="toast__container">
+  <div class="toast__cell">
+
+    <div class="toast toast--blue add-margin">
+      <div class="toast__content">
+        <h3 class="toast__type">
+            <img style="margin:0px !important; display:inline !important; width:24px !important; vertical-align: text-bottom;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAsVBMVEVHcEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACDtcvRAAAAOnRSTlMAJLQUZgH74SL5LRPc0aJAAm5Ptruhkfb65LXjpeiapA5qCA31dDZf5WTqaXM1Xpvw7v0z3eLnMRFOa6dgVwAAALNJREFUKM+dkkcSwyAMRXGJE/fe03vvlfsfLDMCBmN2/iv0HyAhgVBXTfWqLHInjQLB7h32mMr1G/58iLmMkO+fYEE6AzMS329XsjAt4i9GJO6jAT0SE6DTsP5+2GUKgApLOgKoWTnPFwMe1FTgdg6cwImlDFQAjgzGAFIZnAFEEjBtAIFLwvfjR0FGW+Ib4itKjTUrFPz8xPu+M7m/XTcnZcUsb6a1ZqusvES9bOzOnwP9AYmLPf/w/1vKAAAAAElFTkSuQmCC">
+            Fiche pratique</h3>
+        <div class="toast__message">
+          <ul>
+            <li>L’agilité aide à mieux réussir les projets, si on change notre définition d’un projet réussi.</li>
+            <li>La transition agile est dure et concerne tout le monde</li>
+			<li>Si on essaye de ne changer que les équipes de développement, les résultats seront marginaux.</li>
+            <li>Le produit, les opérations et le management doivent changer aussi.</li>
+			<li><strong>Le plus important est de garantir un environnement sain permettant de protéger les employés pendant la transition</strong></li>
+
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div><!--kg-card-end: html--><h2 id="mod-le-en-v-et-agilit-">Modèle en V et Agilité</h2><p><strong>Le modèle en V et l’agilité sont deux réponses à deux questions différentes. </strong>Chacun de ces modèles sont les meilleures réponses à ces questions qu’on connaisse à ce jour. Des dizaines d’années (40 pour waterfall et 20 pour agile) d'affûtage dans une direction donnée.</p><p><strong>La question à laquelle répond le modèle en V est “Comment s’assurer de faire tout le cahier des charges dans le budget ?”</strong>. Un projet réussi dans ce modèle de la DSI classique est un projet qui respecte le cahier des charges en maîtrisant les coûts, les délais et la qualité finale. Donc il faut s’assurer que le cahier des charges ne bouge pas, qu’on pense à tous les éléments dès le début et qu’on dépense le moins possible dans la réalisation.</p><p><strong>La question à laquelle répond le modèle Agile est “Comment s’assurer d’atteindre l’objectif business dans le budget ?”</strong>. L’idée de l’agilité c’est de recoller la définition d’un projet réussi avec la définition de l’entreprise : un projet réussi est un projet qui rapporte plus que ce qu’il a coûté. Le but n’est plus de tout faire dans le budget, mais de trouver le chemin le plus court vers l’objectif.</p><p>Quand on vous dit qu’avec l’agile vous irez plus vite pour moins cher, ça n’est vrai que si vous changez la question à laquelle vous répondez. Sinon c’est un mensonge.</p><p>Adopter le modèle Agile quand votre objectif est de répondre à la première question, de réaliser le cahier des charges dans le budget, n’aura que des résultats très marginaux : les performances vont augmenter légèrement, les coûts aussi.</p><h2 id="les-objectifs-de-l-agilit-">Les objectifs de l’agilité</h2><p>Donc le but de l’agilité c’est de mieux réussir les projets, quand réussir un projet veut dire s’assurer qu’il rapporte plus que ce qu’il a coûté.</p><p>L’agilité c’est la rencontre explosive entre deux idées, deux constats :</p><p>Le 1er constat, c’est que chaque idée de business, de projet, de fonctionnalité est en fait une hypothèse, un pari et que le seul moyen de savoir si l’hypothèse est bonne, c’est de la mettre entre les mains des utilisateurs.</p><p>Dans le modèle classique, on considère chaque idée comme un besoin. C’est du dur, il n’y a pas de question. Mais si on s’inquiète du résultat de chacune de ces idées, alors il faut admettre la part d’incertitude, admettre que ces besoins n’en sont peut être pas. Plutôt que de dire “il faut faire ça”, on apprend à dire “on pense que si on fait ça, alors on obtiendra tel résultat”.</p><p>Il y a donc un enjeu à faire de plus petites hypothèses, de plus petits paris et de les valider ou les invalider au plus vite : c’est mieux de perdre deux jours de travail que deux ans suite à une mauvaise idée.</p><p><strong>Donc le 1er objectif de l’agilité c’est d’adopter des outils et des pratiques qui permettent de raccourcir le délai entre l’idée et la mise entre les mains des utilisateurs</strong>.</p><p>Le 2ème constat c’est la conséquence directe du premier : on fait des hypothèses, on les met rapidement dans les mains des utilisateurs… et on apprend.</p><p>Si c’était une bonne idée, est ce qu’il n’est pas plus intéressant de continuer à extraire de la valeur plutôt que de passer à l’idée suivante ? Si le résultat n’est pas exactement là, est ce qu’il est possible d’ajuster ? Si l’idée était en fait mauvaise, voire nocive, est ce qu’il ne vaut mieux pas revenir en arrière ?</p><p>Le projet mené de façon agile est une succession rapide d’idées et d’apprentissages. Chaque apprentissage apporte un changement, dans le code, dans le produit fini, dans la roadmap.</p><p><strong>Donc le 2ème objectif de l’agilité c’est d’adopter des outils et des pratiques qui permettent d’accepter le changement et les apprentissages tout au long du projet</strong>.</p><h2 id="transition-agile-en-v-ou-transition-agile-agile">Transition agile en V ou transition agile agile</h2><p>Malheureusement, dans le milieu, beaucoup de transitions agiles sont menées comme des projets en V. J’ai souvent vu des transitions dont les critères de succès étaient la conformité à la méthode (scrum ou safe), au lieu de s’inquiéter des résultats.</p><p><strong>Le but ce n’est pas d’être Scrum</strong>. D’ailleurs, ce n’est pas parce que vous êtes Scrum que vous êtes agile. Scrum vous permet de devenir agile.</p><p><strong>Le but ce n’est pas non plus d’être agile. Le but c’est de mieux réussir vos projets.</strong></p><p>Si le critère de succès est la conformité à la méthode, alors la transition est très facile : on met tout le monde de la DSI 2j en formation certifiante© à la Défense et le tour est joué. J’ai même vu des sociétés de conseil qui envoyaient des consultants fraîchement sortis de l’école pour des transitions Safe. Encore une fois, si l’objectif est seulement de coller à la spec, n’importe qui peut le faire.</p><p>Si le critère de succès est une meilleure réussite des projets, alors on se rend compte que la transition est dure et complexe et qu’elle concerne toute l’entreprise, pas seulement la DSI.</p><h2 id="la-transition-agile-est-tr-s-dure-pour-tout-le-monde">La transition agile est très dure, pour tout le monde</h2><p>Pour réussir les projets, toutes les personnes impliquées de près ou de loin dans les projets vont devoir changer leurs façon de travailler.</p><!--kg-card-begin: image--><figure class="kg-card kg-image-card"><img src="../content/images/2019/06/capture-d---e--cran-2019-06-11.png" class="kg-image"></figure><!--kg-card-end: image--><p>Beaucoup d’initiatives agile ont lieu uniquement dans la partie réalisation (moa + dev + test) et sans changer la question sous jacente. En général, le résultat pour l’entreprise est négligeable.</p><p><strong>La transition agile doit se faire aussi chez le management et la direction, dans le produit (métier et utilisateurs) et chez les opérations (prod)</strong>.</p><p>Après 30 ans de renforcement par les objectifs dans le modèle en V, les employés sont affutés et spécialisés pour aller dans cette direction. En changeant de modèle, vous allez vous rendre compte que certaines compétences qui étaient très utiles deviennent obsolètes et d’autres vont devenir vitales et il faudra les acquérir.</p><p>Il est impératif que la direction protège les employés et les aide à changer. <strong>Toute transition qui se fait sans que la direction et le management mouillent le maillot est vouée à l’échec.</strong></p><p>Les managers d’équipe vont aussi devoir changer, parce que les modèles d’équipe vont changer. On passe de centres de services où le manager est un superviseur qui attribue les tâches et optimise les pourcentages d’affectation aux équipes transverses autonomes qui gèrent leurs tâches et qui sont affectées à 100% (les feature teams). Il va falloir aligner, accompagner, mentorer et aider les équipes plutôt que de leur dire quoi faire et comment.</p><p>Les développeurs ont un objectif traditionnellement : faire un code conforme à la spec et qui fonctionne. Maintenant il s’ajoute un deuxième objectif qui change radicalement la façon de travailler : le code doit être facilement changeable. Il doit être fait pour retirer tous les risques liés aux changements. C’est seulement comme ça que l’équipe pourra suivre un rythme d’hypothèses / validations / apprentissages élevé.</p><p>Les testeurs vont devoir apprendre à écrire leurs suites de tests avant que le développement ne commence, comme une partie des spécifications. Ces tests devront être, dans la mesure du possible, automatisés par l’équipe de développement. Tout le temps gagné sur le pointage pourra être consacré aux tests exploratoires.</p><p>Le changement MOA vers PO est un des plus durs. Un rythme plus “temps réel”, des spécifications plus poussées, et cette toute nouvelle dimension qu’est l’apprentissage en cours de projet !</p><p>La partie produit (PO + métier + utilisateurs) voit son principal outil, la roadmap, changer complètement à cause de cette simple question : qu’est ce qu’il se passe si une des idées est mauvaise ? (Il y en aura plus d’une)</p><p>Enfin, vous avez une démarche produit agile et une équipe de réalisation qui travaille vite et bien, mais si vous ne pouvez livrer qu’une fois par mois et qu’un retour en arrière ne peut se faire que par patch, vous n’irez pas loin. La partie ops doit profiter du mouvement DevOps pour re-répartir les tâches et permettre de nouvelles capacités comme le delivery continu, la mise en production progressive et les retours en arrière faciles, tout en continuant de garantir la stabilité, performance et sécurité des applications.</p><p>Ça fait beaucoup de choses à changer et à apprendre. Et ça demande à ce que tout le monde s’investisse réellement. Ça ne peut pas être une initiative locale si on souhaite obtenir des résultats à l’échelle de l’entreprise.</p><!--kg-card-begin: hr--><hr><!--kg-card-end: hr--><h2 id="bonus-bien-choisir-son-coach">Bonus : bien choisir son coach</h2><p>Quand vous faites appel à un coach pour vous aider dans votre transition, il faut bien cadrer son domaine d’intervention en amont !</p><p>Ne pensez pas que les coachs sont interchangeables. J’ai vu trop souvent un mandataire prendre un coach “générique”, ne pas avoir cadré sa mission et être déçu parce qu’il est intervenu ailleurs que là où on l’attendait.</p><p>Vous ne trouverez pas de coach qui soit compétent pour vous aider à la fois au produit, à la réalisation, à la prod, pour le management, l’organisation, le passage à l’échelle etc... Vous aurez très certainement besoin de plusieurs coachs pour tout couvrir.</p><p>Une bonne façon de constituer l’équipe de coach est d’en trouver un qui nous plaît et de lui demander de proposer des profils pour le reste de l’équipe. S’ils savent déjà travailler ensemble, c’est un bon point pour vous.</p><p>Enfin, la botte secrète, une question à vous poser avant d’embaucher un coach : quels sont les critères de succès de sa mission ? C’est une question que j’ai commencée à poser en entretien pour m’assurer d’être sur la même longueur d’onde que mon client. Autrement dit : “Imaginons, nous sommes un an plus tard et vous êtes ravi de mon intervention. Quels résultats on peut observer ?”</p>
+                </div>
+            </section>
+
+
+            <footer class="post-full-footer">
+
+
+            </footer>
+
+
+        </article>
+
+    </div>
+</main>
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+                <article class="read-next-card" style="background-image: url(../content/images/size/w600/2023/09/Capture-d-e-cran-2023-09-08-a--15.49.43-2.png)">
+                    <header class="read-next-card-header">
+                        <small class="read-next-card-header-sitetitle">&mdash; Agile &#x3D;&#x3D; Produit &mdash;</small>
+                        <h3 class="read-next-card-header-title"><a href="../tag/agile/">Agile</a></h3>
+                    </header>
+                    <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                    <div class="read-next-card-content">
+                        <ul>
+                            <li><a href="../bien-du-premier-coup-comment-augmenter-durablement-sa-velocite/">Bien du premier coup : comment augmenter durablement sa vélocité</a></li>
+                            <li><a href="../pratiques-pour-un-chiffrage-reussi/">Pratiques pour un chiffrage réussi</a></li>
+                            <li><a href="../pratiques-pour-des-revues-de-code-reussies/">Pratiques pour des revues de code réussies</a></li>
+                        </ul>
+                    </div>
+                    <footer class="read-next-card-footer">
+                        <a href="../tag/agile/">See all 4 posts →</a>
+                    </footer>
+                </article>
+
+
+        </div>
+    </div>
+</aside>
+
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="../">
+            <span>Agile &#x3D;&#x3D; Produit</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Waterfall et transition Agile</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Waterfall%20et%20transition%20Agile&url=https://maximearnstamm.github.com/blog/waterfall-transition-agile/" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://maximearnstamm.github.com/blog/waterfall-transition-agile/" onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+        </a>
+    </div>
+    <progress id="reading-progress" class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+
+
+  <footer class="site-footer outer">
+    <div class="site-footer-content inner">
+      <section class="copyright"><a href="../">Agile &#x3D;&#x3D; Produit</a> &copy; 2019-2023</section>
+      <nav class="site-footer-nav">
+        <a href="../">Accueil</a>
+        <a href="../tag/product-management/">Product Management</a>
+        <a href="../tag/agile/">Agile</a>
+        <a href="../tag/management/">Management</a>
+        <a href="https://twitter.com/MaximeArnstamm" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://ghost.org" target="_blank" rel="noopener">Fait avec Ghost</a>
+      </nav>
+    </div>
+  </footer>
+
+  </div>
+
+
+  <script>
+    var images = document.querySelectorAll('.kg-gallery-image img');
+    images.forEach(function(image) {
+      var container = image.closest('.kg-gallery-image');
+      var width = image.attributes.width.value;
+      var height = image.attributes.height.value;
+      var ratio = width / height;
+      container.style.flex = ratio + ' 1 0%';
+    })
+  </script>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous">
+  </script>
+  <script type="text/javascript" src="../assets/built/jquery.fitvids.js"></script>
+
+
+
+
+  <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('#reading-progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+
+});
+</script>
+
+
+  
+
+</body>
+
+</html>

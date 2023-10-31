@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>Ne mettez pas vos spécifications dans Jira</title>
+  <meta name="HandheldFriendly" content="True">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="../assets/built/screen.css">
+  <link rel="stylesheet" type="text/css" href="../assets/built/algolia-min.css">
+
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://maximearnstamm.github.com/blog/ne-mettez-pas-vos-specifications-dans-jira/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="https://maximearnstamm.github.com/blog/ne-mettez-pas-vos-specifications-dans-jira/amp/">
+    
+    <meta property="og:site_name" content="Agile &#x3D;&#x3D; Produit">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Ne mettez pas vos spécifications dans Jira">
+    <meta property="og:description" content="Comment faire sa documentation facilement ? Et quel est le rapport avec Jira ?">
+    <meta property="og:url" content="https://maximearnstamm.github.com/blog/ne-mettez-pas-vos-specifications-dans-jira/">
+    <meta property="article:published_time" content="2020-05-25T10:20:46.000Z">
+    <meta property="article:modified_time" content="2020-05-26T09:05:37.000Z">
+    <meta property="article:tag" content="Product Management">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Ne mettez pas vos spécifications dans Jira">
+    <meta name="twitter:description" content="Comment faire sa documentation facilement ? Et quel est le rapport avec Jira ?">
+    <meta name="twitter:url" content="https://maximearnstamm.github.com/blog/ne-mettez-pas-vos-specifications-dans-jira/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Maxime">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Product Management">
+    <meta name="twitter:site" content="@MaximeArnstamm">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Agile &#x3D;&#x3D; Produit",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://maximearnstamm.github.com/blog/favicon.ico",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Maxime",
+        "url": "https://maximearnstamm.github.com/blog/author/maxime/",
+        "sameAs": []
+    },
+    "headline": "Ne mettez pas vos spécifications dans Jira",
+    "url": "https://maximearnstamm.github.com/blog/ne-mettez-pas-vos-specifications-dans-jira/",
+    "datePublished": "2020-05-25T10:20:46.000Z",
+    "dateModified": "2020-05-26T09:05:37.000Z",
+    "keywords": "Product Management",
+    "description": "Comment faire sa documentation facilement ? Et quel est le rapport avec Jira ?",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://maximearnstamm.github.com/blog/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 2.20">
+    <link rel="alternate" type="application/rss+xml" title="Agile &#x3D;&#x3D; Produit" href="https://maximearnstamm.github.com/blog/rss/">
+    <script src="https://getinsights.io/js/insights.js"></script>
+<script>
+insights.init('bhV7j2fLLdlYrJKy');
+insights.trackPages();
+</script>
+
+<style>
+.toast {
+  text-align:left;
+    padding: 21px 0;
+    border-radius:4px;
+    top: 0px;
+    position:relative;
+    box-shadow: 1px 7px 14px -5px rgba(0,0,0,0.2);
+    border: 1px solid #E3E3E3;
+    margin-bottom: 1.5em;
+}
+    
+.toast:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+  border-top-left-radius:4px;
+  border-bottom-left-radius: 4px;
+}
+
+.toast__type {
+  color: #3e3e3e;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.toast__message {
+    margin-top: 0;
+  margin-bottom: 0;
+    color: #878787;
+}
+
+.toast__message p {
+    margin-bottom:10px !important;
+}
+
+.toast__content{
+  padding-left:70px;
+  padding-right:60px;
+}
+
+.toast--blue .toast__icon{
+  background-color:#1D72F3;
+}
+
+.toast--blue:before{
+  background-color:#1D72F3;
+}
+
+</style>
+
+</head>
+
+<body class="post-template tag-product-management">
+
+  <div class="site-wrapper">
+
+    
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav">
+    <div class="site-nav-left">
+                <a class="site-nav-logo" href="../">Agile &#x3D;&#x3D; Produit</a>
+    </div>
+</nav>
+    </div>
+</header>
+
+
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post tag-product-management no-image">
+
+            <header class="post-full-header">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="2020-05-25">25 mai 2020</time>
+                        <span class="date-divider">/</span> <a href="../tag/product-management/">Product Management</a>
+                </section>
+                <h1 class="post-full-title">Ne mettez pas vos spécifications dans Jira</h1>
+            </header>
+
+
+            <section class="post-full-content">
+                <div class="post-content">
+                    <!--kg-card-begin: html--><div class="toast__container">
+  <div class="toast__cell">
+
+    <div class="toast toast--blue add-margin">
+      <div class="toast__content">
+        <h3 class="toast__type">
+            <img style="margin:0px !important; display:inline !important; width:24px !important; vertical-align: text-bottom;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAAAsVBMVEVHcEwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACDtcvRAAAAOnRSTlMAJLQUZgH74SL5LRPc0aJAAm5Ptruhkfb65LXjpeiapA5qCA31dDZf5WTqaXM1Xpvw7v0z3eLnMRFOa6dgVwAAALNJREFUKM+dkkcSwyAMRXGJE/fe03vvlfsfLDMCBmN2/iv0HyAhgVBXTfWqLHInjQLB7h32mMr1G/58iLmMkO+fYEE6AzMS329XsjAt4i9GJO6jAT0SE6DTsP5+2GUKgApLOgKoWTnPFwMe1FTgdg6cwImlDFQAjgzGAFIZnAFEEjBtAIFLwvfjR0FGW+Ib4itKjTUrFPz8xPu+M7m/XTcnZcUsb6a1ZqusvES9bOzOnwP9AYmLPf/w/1vKAAAAAElFTkSuQmCC">
+            Fiche pratique</h3>
+        <div class="toast__message">
+              <ul>
+                  <li>La documentation permet de rentrer dans le projet et de faciliter la réalisation des features à venir.</li>
+               	<li>Si on s’y prend bien, elle fait gagner plus de temps qu’elle n’en prend à produire.</li>
+                  <li>Le gros du travail est fait avec l’écriture des US, mais éparpillé dans Jira</li>
+                  <li> En écrivant plutôt directement les US dans un wiki, on rend facile la documentation.</li>
+                  
+            </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div><!--kg-card-end: html--><p>Quand on est PO on est tellement absorbé par la conduite du projet, qu’en général on ne prend pas le temps de se concentrer sur les outils et les pratiques qui permettent de s’en sortir. Je parle souvent de l’importance d’apprendre à toujours mieux découper ses stories, mais ici je vais vous parler de documentation : pourquoi ça fait gagner du temps et comment faire ça très facilement.</p><h2 id="la-doc-c-est-bien-">La doc c’est bien …</h2><p>Tout le monde est d’accord pour dire que la documentation c’est bien, mais la définition n’est pas la même pour tout le monde. La documentation, c’est l’ensemble des documents (!) qui permettent de rentrer dans le projet et de faciliter la réalisation des features à venir.</p><p><strong>Rentrer dans le projet</strong></p><p>L’arrivée d’un nouveau membre dans une équipe existante est toujours un moment de pression, et pour l’arrivant, qui est jugé sur sa rapidité à s’intégrer et à délivrer, et pour le reste de l’équipe, qui doit faire un effort supplémentaire pour transmettre les informations et le mettre vite à niveau.</p><p>Dans ce cas là, la documentation doit permettre de présenter de manière claire l’environnement (technique, outils, pratiques, équipe, dépendances), les objectifs haut niveau, les grands domaines fonctionnels, la stratégie suivie actuellement, la roadmap.</p><p>Plutôt que de se fier à la tradition orale, une documentation maintenue permet d'accélérer l’onboarding et d’éviter de perdre l’onboardé.</p><p>Une bonne pratique est de profiter de chaque nouvelle arrivée pour mettre à jour ces documents.</p><p><strong>Faciliter la réalisation</strong></p><p>C’est important de faire la différence entre documentation et spécification : la spec sert à faire, la doc sert à comprendre.</p><p>Quand on écrit une user story (spécification) il y a une partie sur ce qui doit être fait, et une partie sur le contexte : d’où on part, quelle est la réalité technique, pourquoi on veut changer, à quoi il faut faire attention etc.</p><p>Il y a un mécanisme qui est facile à observer : plus l’équipe connaît le contexte, moins le product owner doit le détailler dans la spec. En général, ce contexte est dans la tête des membre de l’équipe, et il se transmet par l’expérience et l’immersion.</p><p>Le problème est évident et récurrent : si le contexte est implicite, il n’est pas réécrit dans la spec, et si un membre de l’équipe n’a pas le contexte en tête, un élément sera oublié pendant la réalisation.</p><p>Pour éviter ces problèmes, il y a deux solutions : soit le PO décrit en détail tous les éléments du contexte à chaque user story, soit on maintient une documentation à jour.</p><h2 id="-mais-on-a-pas-le-temps-">… Mais on a pas le temps !</h2><p>On ne va pas se mentir : rares sont les product owners qui ont le temps de faire toutes les tâches liées à leur poste, et la documentation va être un des éléments qui va passer à la trappe en premier.</p><p>Pourtant une bonne partie des tâches chronophages peuvent être réduites grâce à la documentation : la gestion des bugs et des retours, l’écriture des spécification, l’analyse de l’existant, la gestion des dépendances inter-équipes, etc..</p><p>Donc il est possible, si on s’y prend bien, d’avoir un ROI positif sur le temps passé à écrire la documentation.</p><p>A priori, ça paraît illusoire, car on imagine la documentation comme une montagne de travail, une corvée qui n’en vaut pas le coup. Il y a deux raisons majeures à ça : on a en général pas la bonne approche, ni le bon outillage.</p><p>On a la mauvaise approche parce qu’on voit la doc comme un travail séparé de la spec, mais qui demande un effort équivalent. Et effectivement, si on doit réécrire les mêmes informations, avec le même niveau de détail, dans deux endroits différents, l’effort est trop important.</p><p>Mais en réalité, le gros du travail est déjà fait avec l’écriture des user stories, des suites de tests, des documents de démo et des livrables pour les autres services. L’enjeu de la doc n’est plus “comment retranscrire l’ensemble des informations dans ce nouveau document ?” mais bien “comment tirer partie de l’existant pour donner du sens et un lien entre les éléments ?”.</p><h2 id="la-faute-jira">La faute à JIRA</h2><p>L’intérêt d’un outil de gestion de tickets comme Jira tient dans la représentation du flux et l’exploitation des méta données : on veut s’organiser autour du travail et on veut mesurer notre efficacité.</p><p>Mettre les spécifications dans Jira revient à les mettre à la poubelle. C’est lié au principe même de la découpe en user stories : c’est une découpe arbitraire et temporaire, qui n’a de sens qu’au moment de l'exécution. Imaginez une goutte d’eau qui tombe dans un verre. Pendant le trajet la goutte existe, mais une fois dans le verre, la distinction avec le reste de l’eau n’a plus de sens. En mettant les spécifications dans Jira, on maintient artificiellement leur statut de goutte d’eau, sans avoir la possibilité de les rassembler.</p><p>Bien sûr, chacun s’organise comme il peut, avec des règles de nommage de ticket, avec des catégories, des tags, des epics etc. Mais il y a un test très simple à effectuer : choisissez une page importante de votre application qui date un peu et demandez à une personne en dehors de l’équipe de retrouver dans votre Jira l’ensemble des règles de gestion de cette page. Il y a très peu de chance que ça marche. Et ce problème vous le rencontrerez à chaque changement dans l’équipe.</p><p>Comme Jira n’est pas fait pour être une base documentaire, c’est normal que ça soit difficile de s’en servir pour ça. Mais si on ne peut pas se servir des specs pour faire la doc, alors la doc passe à la trappe.</p><h2 id="l-arborescence-et-le-wiki">L’arborescence et le Wiki</h2><p>Aujourd’hui, la meilleure façon que je connaisse de se sortir de tout ça facilement, c’est d’utiliser un wiki et de s’appuyer sur une arborescence. Si vous avez Jira, vous avez forcément Confluence, et vous pourrez en plus tirer partie de l’intégration entre les deux.</p><!--kg-card-begin: image--><figure class="kg-card kg-image-card"><img src="../content/images/2020/05/image.png" class="kg-image"></figure><!--kg-card-end: image--><p>On attache les user stories à leur features, et les features sont organisées par domaine. Ça rend facile d’avoir une vision globale et de naviguer dans la documentation.</p><p>L’idée principale est de mettre le contenu de la user story dans sa propre page wiki. Ensuite on met le lien de cette page dans le ticket de Jira. Ça ne change rien pour l’organisation du travail, mais avec ce peu d’effort, on gagne énormément à la réalisation : quand on travaille sur une user story, on aura toutes les infos nécessaires sur une seule page (la spécification), mais si on veut plus de contexte, on peut remonter aux informations de la feature et voir facilement les user stories qui ont déjà été réalisées (la documentation).</p><p>Le travail de documentation est aussi facilité, parce qu’il se fait au fur et à mesure. A chaque fin de sprint, on peut se prendre une heure pour remonter les informations importantes des user stories réalisées vers leurs pages features.</p><p>Chaque page Feature va contenir les intentions et les objectifs de la feature, des captures d’écran, un récapitulatif des règles importantes etc.. Les pages Domaine vont donner du sens plus global et long terme : le contexte général et les objectifs au niveau produit.</p><blockquote>Donc pour faire facilement une documentation utile, il suffit de ne pas mettre ses specs dans Jira.</blockquote><!--kg-card-begin: hr--><hr><!--kg-card-end: hr--><h2 id="bonus-bonnes-pratiques-d-une-documentation-wiki">Bonus : bonnes pratiques d’une documentation wiki</h2><p>Vous allez passer du temps sur cette documentation, alors chaque élément qui peut faciliter les choses vaut le coup. Donc voici quelques bonnes pratiques qui m’ont fait gagner du temps :</p><p><strong>Création</strong></p><p>J’ai l’habitude de créer une page dès que je commence à travailler sur une feature ou une user story. Je m’en sers pendant le processus de création, j’y attache les documents de travail comme les comptes rendus de réunion ou les maquettes. Ces informations servent à enrichir la documentation sans trop me fatiguer.</p><p><strong>Stock</strong></p><p>Par contre, le risque c’est d’avoir des pages dans notre arborescence qui correspondent à des features ou des US qui n’ont pas été réalisées ou qui ne le seront jamais. Pour pallier à ça, je crée mes pages brouillons dans un dossier à part, et je ne les ajoute dans l’arborescence principale qu’au moment de la réalisation. Il faut faire attention aussi à sortir les user stories ou features qui n’ont pas pu être développées dans un sprint et qui sont dépriorisées.</p><p><strong>Templates</strong></p><p>Ça parait évident, mais l’utilisation des templates change la donne. Ça permet de se guider dans la production des documents, de s’assurer que tout est lisible et qu’on n’a rien oublié. En m’appuyant sur les revues de specs et les ateliers definition of ready je fais évoluer mes templates au fil du projet, c’est un très bon axe d’amélioration continue.</p><p><strong>Migration</strong></p><p>Quand on a un existant dans Jira et qu’on souhaite faire la migration, je conseille d’en faire une tâche dans un sprint. C’est un travail d’équipe qui prendra plusieurs jours. Le bon côté c’est qu’en repassant sur toutes les vieilles specs, on redécouvre des informations, on fait émerger des nouveaux axes d’amélioration et tout le monde comprends mieux le produit.</p><p><strong>Mise à jour</strong></p><p>C’est important de ritualiser les mises à jour de la documentation. Il ne faut surtout pas se créer une pile de travail, parce que ça passera systématiquement à la trappe et ça en sera fini de notre doc. Donc à chaque fin de sprint, je me prend une heure pour repasser sur ce qui vient d’avoir été modifié. Je vais remonter les informations clés des US dans les pages features, m’assurer que les captures d’écrans sont à jour, attacher les documents que j’ai produit pour les différentes réunions et démos, etc..</p><p><strong>Page dépréciée</strong></p><p>Un autre élément à prendre en compte en fin de sprint est la dépréciation des vieilles user stories. Régulièrement, un nouveau développement va annuler et remplacer un ancien. Ça vaut le coup de garder les vieilles specs, mais de bien marquer qu’elles sont obsolètes.</p><p><strong>Doc technique</strong></p><p>Il faut aussi encourager l’équipe de dev dans la production de doc technique pour les parties complexes. L’organisation en arborescence rend facile d’y ajouter leurs pages et documents. C’est très pratique de commencer un développement sur une nouvelle US et d’avoir facilement accessible le contexte de la feature, les autres us et la doc technique liée à cette feature.</p><p>Cette doc technique doit aussi être maintenue, donc c’est une bonne idée pour les devs de repasser rapidement dessus en fin de sprint.</p><p><strong>Suites de tests</strong></p><p>Toujours dans l’optique d’avoir toutes les informations au même endroit, je vais toujours faire en sorte d’attacher ou de mettre un lien dans chaque page feature vers leurs suites de tests respectives.</p><p><strong>Commentaires</strong></p><p>Et c’est pareil pour les commentaires. Si vous regardez n’importe quelle US dans un ticket Jira, vous retrouverez des informations fonctionnelles ou techniques importantes dans les commentaires. Ça serait dommage de les perdre. Donc j’essaye de faire en sorte que les commentaires soient écrits sur la page US dans le wiki plutôt que sur le ticket.</p><p><strong>Outils externes</strong></p><p>Enfin, il faut faire attention aux liens vers des outils externes. Par exemple un lien dans l’US vers la maquette designée dans l’outil du designer. La plupart du temps, quelque mois plus tard, la maquette a disparue et on a perdu l’information. Donc pour chaque type d’outil externe il faudra se poser la question de la pertinence de sauver l’information ou non.</p>
+                </div>
+            </section>
+
+
+            <footer class="post-full-footer">
+
+
+            </footer>
+
+
+        </article>
+
+    </div>
+</main>
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+                <article class="read-next-card" style="background-image: url(../content/images/size/w600/2023/09/Capture-d-e-cran-2023-09-08-a--15.50.42-2.png)">
+                    <header class="read-next-card-header">
+                        <small class="read-next-card-header-sitetitle">&mdash; Agile &#x3D;&#x3D; Produit &mdash;</small>
+                        <h3 class="read-next-card-header-title"><a href="../tag/product-management/">Product Management</a></h3>
+                    </header>
+                    <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"/></svg>
+</div>
+                    <div class="read-next-card-content">
+                        <ul>
+                            <li><a href="../explorez-vos-opportunites-avec-les-jobs/">Explorez vos opportunités avec les Jobs</a></li>
+                            <li><a href="../tips-pour-les-interviews-utilisateurs/">Tips pour vos interviews utilisateurs</a></li>
+                            <li><a href="../deux-outils-dux-pour-le-product-owner-et-le-product-manager/">Deux outils d&#x27;UX pour le Product Owner et le Product Manager</a></li>
+                        </ul>
+                    </div>
+                    <footer class="read-next-card-footer">
+                        <a href="../tag/product-management/">See all 5 posts →</a>
+                    </footer>
+                </article>
+
+
+        </div>
+    </div>
+</aside>
+
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="../">
+            <span>Agile &#x3D;&#x3D; Produit</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">&mdash;</span>
+    <div class="floating-header-title">Ne mettez pas vos spécifications dans Jira</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"/>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Ne%20mettez%20pas%20vos%20sp%C3%A9cifications%20dans%20Jira&url=https://maximearnstamm.github.com/blog/ne-mettez-pas-vos-specifications-dans-jira/" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg>
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://maximearnstamm.github.com/blog/ne-mettez-pas-vos-specifications-dans-jira/" onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg>
+        </a>
+    </div>
+    <progress id="reading-progress" class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+
+
+  <footer class="site-footer outer">
+    <div class="site-footer-content inner">
+      <section class="copyright"><a href="../">Agile &#x3D;&#x3D; Produit</a> &copy; 2019-2023</section>
+      <nav class="site-footer-nav">
+        <a href="../">Accueil</a>
+        <a href="../tag/product-management/">Product Management</a>
+        <a href="../tag/agile/">Agile</a>
+        <a href="../tag/management/">Management</a>
+        <a href="https://twitter.com/MaximeArnstamm" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://ghost.org" target="_blank" rel="noopener">Fait avec Ghost</a>
+      </nav>
+    </div>
+  </footer>
+
+  </div>
+
+
+  <script>
+    var images = document.querySelectorAll('.kg-gallery-image img');
+    images.forEach(function(image) {
+      var container = image.closest('.kg-gallery-image');
+      var width = image.attributes.width.value;
+      var height = image.attributes.height.value;
+      var ratio = width / height;
+      container.style.flex = ratio + ' 1 0%';
+    })
+  </script>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous">
+  </script>
+  <script type="text/javascript" src="../assets/built/jquery.fitvids.js"></script>
+
+
+
+
+  <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('#reading-progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+
+});
+</script>
+
+
+  
+
+</body>
+
+</html>
